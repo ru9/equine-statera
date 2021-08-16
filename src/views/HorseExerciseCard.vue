@@ -46,16 +46,27 @@
         >
       </div>
 
-      <div v-if="exerciseDetails.introduction">
-        <h3>Introduction</h3>
-        <p>{{ exerciseDetails.introduction }}</p>
-      </div>
-
-      <div v-if="exerciseDetails.howTo">
-        <h3>How To</h3>
-        <p>
-          {{ exerciseDetails.howTo }}
-        </p>
+      <div class="mt-5">
+        <v-tabs
+          v-model="tab"
+          grow
+          v-if="exerciseDetails.introduction || exerciseDetails.howTo"
+        >
+          <v-tab> Introduction </v-tab>
+          <v-tab> How To </v-tab>
+        </v-tabs>
+        <v-tabs-items v-model="tab">
+          <v-tab-item>
+            <v-card>
+              <v-card-text> {{ exerciseDetails.introduction }} </v-card-text>
+            </v-card>
+          </v-tab-item>
+          <v-tab-item>
+            <v-card>
+              <v-card-text> {{ exerciseDetails.howTo }}</v-card-text>
+            </v-card>
+          </v-tab-item>
+        </v-tabs-items>
       </div>
     </v-container>
   </div>
@@ -66,6 +77,7 @@ export default {
   data() {
     return {
       exerciseDetails: {},
+      tab: null,
     };
   },
 
