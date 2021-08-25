@@ -1,15 +1,23 @@
 <template>
   <div>
-    <v-btn v-on:click="consoleLog">Console log</v-btn>
-    <h2>This is: {{ this.$route.params.id }}</h2>
     <v-container>
       <v-progress-circular
+        class="d-flex justify-center"
         :size="70"
         :width="10"
         color="purple"
         indeterminate
         v-if="exerciseDetails.name == null"
       ></v-progress-circular>
+
+      <v-img
+        v-if="exerciseDetails.pictureId"
+        v-bind:src="
+          'https://firebasestorage.googleapis.com/v0/b/equine-statera.appspot.com/o/horse-exercises%2F' +
+          exerciseDetails.pictureId +
+          '.jpg?alt=media'
+        "
+      ></v-img>
 
       <h1>{{ exerciseDetails.name }}</h1>
 
