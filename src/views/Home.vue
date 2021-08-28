@@ -22,7 +22,7 @@
         <v-btn class="mt-4 d-flex d-sm-none" x-large icon outlined>
           <v-icon>mdi-plus</v-icon>
         </v-btn>
-        <v-btn class="mt-3 d-none d-sm-flex" x-large rounded depressed
+        <v-btn class="mt-3 d-none d-sm-flex" x-large rounded outlined
           >Subscribe</v-btn
         >
       </v-row>
