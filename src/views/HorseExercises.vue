@@ -11,30 +11,28 @@
       ></v-progress-circular>
     </div>
 
-    <v-container>
-      <v-row no-gutters>
-        <v-col
-          class="d-flex"
-          :lg="3"
-          :md="4"
-          :sm="6"
-          cols="12"
-          v-for="exercise in horseExercises"
-          :key="exercise.id"
-        >
-          <horse-exercise-teaser
-            :exerciseId="exercise.id"
-            :exerciseDifficulty="exercise.difficulty"
-            :exerciseName="exercise.name"
-            :exerciseTeaser="exercise.teaser"
-            :exerciseGround="exercise.ground"
-            :exerciseRiding="exercise.riding"
-            :exerciseConfidence="exercise.confidence"
-            :exerciseConnection="exercise.connection"
-          />
-        </v-col>
-      </v-row>
-    </v-container>
+    <v-row no-gutters>
+      <v-col
+        class="d-flex"
+        :lg="3"
+        :md="4"
+        :sm="6"
+        cols="12"
+        v-for="exercise in horseExercises"
+        :key="exercise.id"
+      >
+        <horse-exercise-teaser
+          :exerciseId="exercise.id"
+          :exerciseDifficulty="exercise.difficulty"
+          :exerciseName="exercise.name"
+          :exerciseTeaser="exercise.teaser"
+          :exerciseGround="exercise.ground"
+          :exerciseRiding="exercise.riding"
+          :exerciseConfidence="exercise.confidence"
+          :exerciseConnection="exercise.connection"
+        />
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
