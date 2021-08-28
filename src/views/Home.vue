@@ -1,13 +1,10 @@
 <template>
-  <div class="home">
-    <v-container fill-height align-start>
+  <v-container fill-height align-start>
+    <h1>Equine Statera</h1>
+    <v-container>
       <v-row>
-        <h1>Equine Statera</h1>
-      </v-row>
-      <v-row>
-        <v-row style="width: 100%">
-          <v-spacer />
-          <v-col cols="6">
+        <v-row>
+          <v-col>
             <p class="text-center">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem eum
               distinctio quia maiores nam placeat ea facere voluptates
@@ -15,27 +12,20 @@
               reprehenderit doloremque fugit beatae!
             </p>
           </v-col>
-          <v-spacer />
         </v-row>
-        <v-row style="width: 100%">
-          <v-spacer />
-          <v-col cols="5">
-            <v-text-field
-              align-content-end
-              label="Your E-mail address"
-              filled
-              rounded
-              dense
-            >
+
+        <v-row justify="center">
+          <v-col cols="12">
+            <v-text-field label="Your E-mail address" filled rounded dense>
             </v-text-field>
           </v-col>
-          <v-col cols="1">
+
+          <v-col cols="6">
             <v-btn x-large rounded depressed> Subscribe </v-btn>
           </v-col>
-          <v-spacer />
         </v-row>
-        <v-row style="width: 100%">
-          <v-spacer />
+
+        <v-row justify="center">
           <v-btn
             color="blue lighten-3"
             x-large
@@ -45,20 +35,8 @@
           >
             Horse Exercises
           </v-btn>
-          <v-spacer />
         </v-row>
       </v-row>
     </v-container>
-  </div>
+  </v-container>
 </template>
-
-<script>
-export default {};
-</script>
-
-<style scoped>
-.home {
-  height: 100%;
-  widows: 100%;
-}
-</style>
