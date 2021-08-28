@@ -1,14 +1,15 @@
 <template>
   <div>
     <v-container>
-      <v-progress-circular
-        class="d-flex justify-center"
-        :size="70"
-        :width="10"
-        color="purple"
-        indeterminate
-        v-if="exerciseDetails.name == null"
-      ></v-progress-circular>
+      <div class="d-flex justify-center">
+        <v-progress-circular
+          :size="70"
+          :width="10"
+          color="purple"
+          indeterminate
+          v-if="exerciseDetails.name == null"
+        ></v-progress-circular>
+      </div>
 
       <v-img
         v-if="exerciseDetails.pictureId"
@@ -98,11 +99,6 @@ export default {
     // .then((doc) => {
     this.exerciseDetails = result.data();
     // });
-  },
-  methods: {
-    consoleLog() {
-      console.log(this.exerciseDetails);
-    },
   },
 };
 </script>

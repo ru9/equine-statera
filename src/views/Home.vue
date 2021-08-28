@@ -15,17 +15,11 @@
 
       <v-row class="mb-10" justify="center">
         <v-col cols="10" :sm="8" :md="8" :lg="6" :xl="4">
-          <v-text-field label="Your E-mail address" filled rounded dense>
+          <v-text-field label="Your E-mail address" outlined rounded>
           </v-text-field>
         </v-col>
 
-        <v-btn
-          class="mt-3 d-flex d-sm-none"
-          x-large
-          icon
-          color="green"
-          outlined
-        >
+        <v-btn class="mt-4 d-flex d-sm-none" x-large icon outlined>
           <v-icon>mdi-plus</v-icon>
         </v-btn>
         <v-btn class="mt-3 d-none d-sm-flex" x-large rounded depressed
