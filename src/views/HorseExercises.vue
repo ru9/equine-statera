@@ -66,10 +66,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.horseExercises {
-  height: 100%;
-  width: 100%;
-}
-</style>
